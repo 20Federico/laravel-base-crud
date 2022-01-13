@@ -1,0 +1,35 @@
+.component_container {
+  background-color: black;
+  
+  .container {
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding: $padding_xlarge 0;
+
+    .label {
+      color: $color-light;
+      background-color: $color_primary;
+      position: absolute;
+      top: 0;
+      transform: translateY(-50%);
+      font-size: 20px;
+      font-weight: bold;
+      padding: 5px $padding_medium;
+    }
+
+    .cards_box {
+      width: 100%;
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+    }
+
+    .btn_center {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: $padding_medium;
+    }
+  }
+}

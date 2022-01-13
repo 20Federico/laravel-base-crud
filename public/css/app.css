@@ -1,0 +1,279 @@
+.container {
+  width: 1240px;
+  margin: auto;
+}
+
+.btn_outline_primary {
+  color: white;
+  background-color: transparent;
+  border: 2px solid #0282F9;
+  padding: 10px 15px;
+  font-weight: bold;
+}
+
+.btn_outline_primary:hover {
+  border-style: groove;
+}
+
+.btn_primary {
+  color: white;
+  background-color: #0282F9;
+  font-weight: bold;
+  border: none;
+  padding: 5px 60px;
+  font-size: 16px;
+  border-style: outset;
+  border-color: #0282F9;
+}
+
+.btn_primary:hover {
+  border-style: inset;
+  border-color: #2079cc;
+  background-color: #2079cc;
+  color: #c0bdbd;
+}
+
+header {
+  position: relative;
+}
+
+header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+}
+
+header nav img {
+  width: 80px;
+}
+
+header nav ul {
+  list-style-type: none;
+  display: flex;
+  margin: 0;
+}
+
+header nav ul a {
+  display: inline-block;
+  padding: 10px 15px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #464657;
+  position: relative;
+}
+
+header nav ul a.active {
+  color: #0282F9;
+}
+
+header nav ul a.active::before {
+  content: "";
+  width: 100%;
+  height: 4px;
+  background-color: #0282F9;
+  position: absolute;
+  bottom: -39px;
+  left: 0;
+}
+
+.banner {
+  height: 35vh;
+  background-image: url("/img/jumbotron.jpg");
+  background-size: cover;
+}
+
+.component_container {
+  background-color: black;
+}
+
+.component_container .container {
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding: 40px 0;
+}
+
+.component_container .container .label {
+  color: white;
+  background-color: #0282F9;
+  position: absolute;
+  top: 0;
+  transform: translateY(-50%);
+  font-size: 20px;
+  font-weight: bold;
+  padding: 5px 20px;
+}
+
+.component_container .container .cards_box {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.component_container .container .btn_center {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 20px;
+}
+
+.card {
+  width: calc(16.6666666667% - 20px);
+  padding-bottom: 15px;
+  color: white;
+  font-size: 14px;
+  position: relative;
+  background-color: transparent;
+  border: none;
+}
+
+.card .cover_box {
+  width: 100%;
+  aspect-ratio: 1/1;
+  margin-bottom: 10px;
+  transition: 0.5s;
+}
+
+.card .overlay {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  opacity: 0;
+  transition: 0.5s;
+  transition-delay: 0.2s;
+}
+
+.card .overlay a {
+  padding: 5px;
+  text-decoration: none;
+}
+
+.card:hover .cover_box {
+  opacity: 0.2;
+}
+
+.card:hover .overlay {
+  opacity: 1;
+}
+
+.company_more_info {
+  color: white;
+  background-image: url("/img/footer-bg.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+.company_more_info .container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.company_more_info .container .info_container {
+  max-height: 400px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  width: 30%;
+  padding: 40px 0;
+}
+
+.company_more_info .container .info_container .list {
+  padding: 0 10px;
+}
+
+.company_more_info .container .info_container h3 {
+  margin: 0;
+}
+
+.company_more_info .container .info_container ul {
+  list-style: none;
+  padding: 0;
+}
+
+.company_more_info .container .info_container ul a {
+  color: #959599;
+  text-decoration: none;
+}
+
+.company_more_info .container .info_container ul a:hover {
+  text-decoration: underline;
+}
+
+.company_more_info .container .logo_bg_container {
+  width: 45%;
+  background-image: url("/img/dc-logo-bg.png");
+  background-size: cover;
+  background-position: center;
+}
+
+.footer_foot {
+  background-color: #303030;
+  padding: 25px 0;
+}
+
+.footer_foot .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer_foot .container .social_container {
+  color: #0282F9;
+  font-weight: bold;
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+
+.footer_foot .container .social_container .social_list {
+  padding-left: 15px;
+}
+
+.footer_foot .container .social_container img {
+  padding: 7px;
+  transition: 0.3s;
+}
+
+.footer_foot .container .social_container img:hover {
+  transform: scale(1.2);
+}
+
+.company_info {
+  background-color: #0282F9;
+  padding: 50px 0;
+}
+
+.company_info .container {
+  display: flex;
+  justify-content: space-around;
+}
+
+.company_info .element {
+  display: flex;
+  align-items: center;
+}
+
+.company_info .element img {
+  height: 50px;
+  max-width: 60px;
+}
+
+.company_info .element a {
+  text-decoration: none;
+  color: white;
+  padding: 10px 15px;
+}
+
+* {
+  font-family: "Open Sans Condensed", sans-serif;
+}
+
+body {
+  margin: 0;
+}
+

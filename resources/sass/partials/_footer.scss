@@ -1,0 +1,82 @@
+.company_more_info {
+  color: $color_light;
+  background-image: url("/img/footer-bg.jpg");
+  background-position: center;
+  background-size: cover;
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+
+      .info_container {
+        max-height: 400px;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        width: 30%;
+        padding: $padding_xlarge 0;
+
+        .list {
+          padding: 0 $padding_xsmall;
+        }
+
+        h3 {
+          margin: 0;
+        }
+        ul {
+          list-style: none;
+          padding: 0;
+
+          a {
+            color: $color_grey;
+            text-decoration: none;
+
+            &:hover {
+              text-decoration: underline;
+            }
+          }
+        }
+      }
+
+      .logo_bg_container {
+        width: 45%;
+        background-image: url("/img/dc-logo-bg.png");
+        background-size: cover;
+        background-position: center;
+      }
+  }
+
+}
+
+.footer_foot {
+  background-color: $color_bg_dark;
+  padding: $padding_large 0;
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .social_container {
+      color: $color_primary;
+      font-weight: bold;
+      margin: 0;
+      display: flex;
+      align-items: center;
+      
+      .social_list {
+        padding-left: $padding_small;
+      }
+      img {
+        padding: 7px;
+        transition: .3s;
+
+        &:hover {
+          transform: scale(1.2);
+        }
+      }
+    }
+
+  }
+}

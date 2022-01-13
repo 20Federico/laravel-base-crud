@@ -1,1 +1,18 @@
-//
+@import "partials/variables";
+@import "partials/utilities";
+
+@import "partials/header";
+
+@import "partials/m_comics";
+@import "partials/comics_card";
+
+@import "partials/footer";
+@import "partials/footerTop";
+
+* {
+  font-family: 'Open Sans Condensed', sans-serif;
+}
+
+body {
+  margin: 0;
+}

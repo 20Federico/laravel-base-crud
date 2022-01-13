@@ -1,0 +1,49 @@
+header {
+  position: relative;
+
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: $padding_medium 0;
+
+    img {
+      width: 80px;
+    }
+
+    ul {
+      list-style-type: none;
+      display: flex;
+      margin: 0;
+
+      a {
+        display: inline-block;
+        padding: $padding_xsmall $padding_small;
+        font-weight: bold;
+        text-decoration: none;
+        color: $color_dark_grey;
+        position: relative;
+
+        &.active {
+          color: $color_primary;
+          
+          &::before {
+            content: "";
+            width: 100%;
+            height: 4px;
+            background-color: $color_primary;
+            position: absolute;
+            bottom: -39px;
+            left: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+.banner {
+  height: 35vh;
+  background-image: url('/img/jumbotron.jpg');
+  background-size: cover;
+}

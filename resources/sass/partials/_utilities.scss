@@ -1,0 +1,34 @@
+.container {
+  width: 1240px;
+  margin: auto;
+}
+
+.btn_outline_primary {
+  color: $color_light;
+  background-color: transparent;
+  border: 2px solid $color_primary;
+  padding: $padding_xsmall $padding_small;
+  font-weight: bold;
+
+  &:hover {
+    border-style: groove;
+  }
+}
+
+.btn_primary {
+  color: $color_light;
+  background-color: $color_primary;
+  font-weight: bold;
+  border: none;
+  padding: 5px 60px;
+  font-size: 16px;
+  border-style: outset;
+  border-color: $color_primary;
+
+  &:hover {
+    border-style: inset;
+    border-color: $color_primary_hover;
+    background-color: $color_primary_hover;
+    color: rgb(192, 189, 189);
+  }
+}

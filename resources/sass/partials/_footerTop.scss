@@ -1,0 +1,23 @@
+.company_info {
+  background-color: $color_primary;
+  padding: $padding_xxlarge 0;
+
+  .container {
+    display: flex;
+    justify-content: space-around;
+  }
+  .element {
+    display: flex;
+    align-items: center;
+  
+    img {
+      height: 50px;
+      max-width: 60px;
+    }
+    a {
+      text-decoration: none;
+      color: $color_light;
+      padding: $padding_xsmall $padding_small;
+    }
+  }
+}
