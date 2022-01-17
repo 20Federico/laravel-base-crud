@@ -17,7 +17,9 @@ $activeRouteName = Request::route()->getName();
 
 <header>
   <nav class="container">
-    <img src="{{asset('img/dc-logo.png')}}" alt="dc logo">
+    <a href="{{route('home.index')}}">
+      <img src="{{asset('img/dc-logo.png')}}" alt="dc logo">
+    </a>
     <ul>
       @foreach ($navLinks as $link)
       <li>
