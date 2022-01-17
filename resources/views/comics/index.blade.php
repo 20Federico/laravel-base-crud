@@ -15,6 +15,8 @@
           <h5 class="card-title">{{$comic->title}}</h5>
           <p class="card-text text-truncate">{{$comic->description}}</p>
           <a href="{{route('comics.show', $comic->id)}}" class="btn btn-primary">MORE INFO</a>
+          <a href="{{route('comics.edit', $comic->id)}}" class="btn btn-success">EDIT</a>
+          <a href="{{route('comics.destroy', $comic->id)}}" class="btn btn-danger">DELETE</a>
         </div>
       </div>
       @endforeach
