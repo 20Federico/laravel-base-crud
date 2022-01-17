@@ -15,7 +15,12 @@
           <p><i>TYPE:</i> {{$comic->type}}</p>
           <p><i>PRICE:</i> {{$comic->price}}</p>
           <p><i>SALE DATE:</i> {{$comic->sale_date}}</p>
-          {{-- <a href="{{route('comics.show')}}" class="btn btn-primary">Details</a> --}}
+          <a href="{{route('comics.edit', $comic->id)}}" class="btn btn-success">EDIT</a>
+          <form action="{{ route('comics.destroy', $comic->id) }}" method="post" class="mt-1">
+	          @csrf
+            @method('DELETE')
+	          <input type="submit" class="btn btn-danger" value="DELETE">
+          </form>
         </div>
       </div>
       <div class="col">
