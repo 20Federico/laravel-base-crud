@@ -4,6 +4,9 @@
 
 @section('main_content')
   <div class="container py-5">
+    <div class="text-center">
+      <a href="{{route('comics.create')}}" class="btn btn-primary mb-5">ADD NEW COMIC</a>
+    </div>
     <div class="row row-cols-4 gap-3">
       @foreach ($comics as $comic)
       <div class="card" style="width: 18rem; background-color: rgb(221, 220, 220)">
@@ -11,7 +14,7 @@
         <div class="card-body text-dark">      
           <h5 class="card-title">{{$comic->title}}</h5>
           <p class="card-text text-truncate">{{$comic->description}}</p>
-          <a href="{{route('comics.show')}}" class="btn btn-primary">Details</a>
+          <a href="{{route('comics.show', $comic->id)}}" class="btn btn-primary">MORE INFO</a>
         </div>
       </div>
       @endforeach
