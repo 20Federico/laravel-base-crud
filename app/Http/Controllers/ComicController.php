@@ -37,16 +37,24 @@ class ComicController extends Controller
      */
     public function store(Request $request)
     {
-      $data= $request->all();
+      $validatedData= $request->validate([
+        'title' => 'required|max:255',
+        'description' => 'required',
+        'thumb' => 'required|max:255',
+        'price' => 'required|numeric',
+        'series' => 'required|max:255',
+        'sale_date' => 'required|date',
+        'type' => 'required',
+      ]);
       
       $newComic = new Comic();
-      $newComic->title = $data['title'];
-      $newComic->description = $data['description'];
-      $newComic->thumb = $data['thumb'];
-      $newComic->price = $data['price'];
-      $newComic->series = $data['series'];
-      $newComic->sale_date = $data['sale_date'];
-      $newComic->type = $data['type'];
+      $newComic->title = $validatedData['title'];
+      $newComic->description = $validatedData['description'];
+      $newComic->thumb = $validatedData['thumb'];
+      $newComic->price = $validatedData['price'];
+      $newComic->series = $validatedData['series'];
+      $newComic->sale_date = $validatedData['sale_date'];
+      $newComic->type = $validatedData['type'];
       $newComic->save();
 
       return redirect()->route('comics.show', $newComic->id);
@@ -83,9 +91,17 @@ class ComicController extends Controller
      */
     public function update(Request $request, Comic $comic)
     {
-      $data= $request->all();
+      $vData= $request->validate([
+        'title' => 'required|max:255',
+        'description' => 'required',
+        'thumb' => 'required|max:255',
+        'price' => 'required|numeric',
+        'series' => 'required|max:255',
+        'sale_date' => 'required|date',
+        'type' => 'required',
+      ]);
 
-      $comic->update($data);
+      $comic->update($vData);
 
       return redirect()->route('comics.show', $comic->id);
     }

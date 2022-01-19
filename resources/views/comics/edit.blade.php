@@ -4,6 +4,15 @@
 
 @section('main')
   <div class="container py-5">
+    @if ($errors->any())
+    <div class="alert alert-danger">
+      <ul>
+        @foreach ($errors->all() as $error)
+        <li>{{ $error }}</li>
+        @endforeach
+      </ul>
+    </div>
+  @endif
     <h1 class="mb-5">Edit comic <strong>{{$comic->title}}</strong></h1>
     <form action="{{ route('comics.update', $comic->id) }}" method="post">
       @csrf
